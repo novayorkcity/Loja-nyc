@@ -2,19 +2,20 @@
   "descontoGlobal": 10,
   "cupons": [
     {
-      "code": "RATAO",
-      "discount": 50,
-      "limite": 1,
+      "code": "RATAO20",
+      "discount": 20,
+      "limite": 5,
       "usos": 0,
       "expira": "2026-12-31"
     },
     {
-      "code": "STYLE",
+      "code": "STYLE20",
       "discount": 50,
-      "limite": 1,
+      "limite": 5,
       "usos": 0,
       "expira": "2026-08-01"
     }
   ]
 }
+
 
