@@ -1,5 +1,5 @@
 {
-  "descontoGlobal": 20,
+  "descontoGlobal": 10,
   "cupons": [
     {
       "code": "RATAO",
@@ -17,3 +17,4 @@
     }
   ]
 }
+
