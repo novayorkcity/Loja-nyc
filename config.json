@@ -1,22 +1,23 @@
 {
-  "descontoGlobal": 10,
+  "descontoGlobal": 0,
   "cupons": [
     {
-      "code": "RATAO20",
-      "discount": 20,
-      "limite": 5,
+      "code": "NYC50",
+      "discount": 50,
+      "limite": 1,
       "usos": 0,
-      "expira": "2026-03-11"
+      "expira": "2026-03-12"
     },
     {
       "code": "STYLE20",
       "discount": 20,
-      "limite": 5,
+      "limite": 2,
       "usos": 0,
-      "expira": "2026-03-11"
+      "expira": "2026-03-12"
     }
   ]
 }
+
 
 
 
