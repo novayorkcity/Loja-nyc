@@ -6,17 +6,18 @@
       "discount": 20,
       "limite": 5,
       "usos": 0,
-      "expira": "2026-12-31"
+      "expira": "2026-03-11"
     },
     {
       "code": "STYLE20",
       "discount": 20,
       "limite": 5,
       "usos": 0,
-      "expira": "2026-08-01"
+      "expira": "2026-03-11"
     }
   ]
 }
+
 
 
 
