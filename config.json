@@ -2,21 +2,29 @@
   "descontoGlobal": 10,
   "cupons": [
     {
-      "code": "DEREKVIADO",
+      "code": "DEREK10",
       "discount": 10,
-      "limite": 10,
+      "limite": 5,
       "usos": 0,
       "expira": "2026-03-12"
     },
     {
-      "code": "STYLE20",
-      "discount": 20,
-      "limite": 2,
+      "code": "RATAO10",
+      "discount": 10,
+      "limite": 5,
+      "usos": 0,
+      "expira": "2026-03-12"
+    },
+    {
+      "code": "STYLE10",
+      "discount": 10,
+      "limite": 5,
       "usos": 0,
       "expira": "2026-03-12"
     }
   ]
 }
+
 
 
 
