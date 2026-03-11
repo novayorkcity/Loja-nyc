@@ -9,8 +9,8 @@
       "expira": "2026-03-12"
     },
     {
-      "code": "viadinhoderek15",
-      "discount": 15,
+      "code": "viadinhoderek10",
+      "discount": 10,
       "limite": 10,
       "usos": 0,
       "expira": "2026-03-12"
@@ -24,6 +24,7 @@
     }
   ]
 }
+
 
 
 
