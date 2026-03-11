@@ -2,14 +2,7 @@
   "descontoGlobal": 10,
   "cupons": [
     {
-      "code": "ratao246",
-      "discount": 10,
-      "limite": 10,
-      "usos": 0,
-      "expira": "2026-03-12"
-    },
-    {
-      "code": "viadinhoderek10",
+      "code": "DEREKVIADO",
       "discount": 10,
       "limite": 10,
       "usos": 0,
@@ -24,6 +17,7 @@
     }
   ]
 }
+
 
 
 
