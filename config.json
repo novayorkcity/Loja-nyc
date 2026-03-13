@@ -2,28 +2,29 @@
   "descontoGlobal": 10,
   "cupons": [
     {
-      "code": "DEREK10",
+      "code": "VIMPORDEREK",
       "discount": 10,
-      "limite": 5,
+      "limite": 50,
       "usos": 0,
-      "expira": "2026-03-12"
+      "expira": "2026-04-12"
     },
     {
-      "code": "RATAO10",
+      "code": "VIMPORRATAO",
       "discount": 10,
-      "limite": 5,
+      "limite": 50,
       "usos": 0,
-      "expira": "2026-03-12"
+      "expira": "2026-04-12"
     },
     {
-      "code": "STYLE10",
+      "code": "VIMPORSTYLE",
       "discount": 10,
-      "limite": 5,
+      "limite": 50,
       "usos": 0,
-      "expira": "2026-03-12"
+      "expira": "2026-04-12"
     }
   ]
 }
+
 
 
 
