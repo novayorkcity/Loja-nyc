@@ -1,12 +1,12 @@
 {
-  "descontoGlobal": 20,
+  "descontoGlobal": 10,
   "cupons": [
     {
       "code": "DESCONTO10",
       "discount": 10,
       "limite": 100,
       "usos": 0,
-      "expira": "2026-12-31",
+      "expira": "2026-03-24",
       "usadosPor": []
     }
   ]
