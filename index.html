@@ -308,13 +308,13 @@ placeholder="Informe a quantidade desejada">
     
 </div>
 
-<p class="aviso">Redes Sociais NYC:</p>
+<p class="aviso">Redes Sociais NRP:</p>
 
 <div class="redes-rodape">
     <a href="https://discord.gg/KWsRxG93Mb" target="_blank">
         <img src="discord.png">
     </a>
-    <a href="https://www.instagram.com/novayorkrp_?igsh=MzlpOXc3ZnZyNHp2" target="_blank">
+    <a href="https://www.instagram.com/_novaroleplay_?igsh=MzlpOXc3ZnZyNHp2" target="_blank">
         <img src="insta.png">
     </a>
     <a href="https://www.youtube.com/channel/UC0ffghKEhJzXvJ3L3jnlUfw" target="_blank">
@@ -373,7 +373,7 @@ function gerarNumeroPedido() {
   const numeros = "0123456789";
   const caracteres = letras + numeros;
 
-  let codigo = "NYC-";
+  let codigo = "NRP-";
 
   for (let i = 0; i < 6; i++) {
     codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
@@ -730,7 +730,7 @@ fetch(webhookURL, {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
         content:
-        "💙 NOVA YORK CITY RP\n\n" +
+        "💙 NOVA ROLEPLAY\n\n" +
         "📦 ID PEDIDO: " +pedidoID+ "\n" +
 
         "👤 NICK: " + nick + "\n" +
@@ -753,7 +753,7 @@ registrarPedido();
 
     alert("✅Pedido enviado com sucesso!\n\n"+
           "📝ID DO PEDIDO: "+pedidoID+"\n"+
-          " Guarde o ID do pedido.");
+          " Guarde o ID do pedido, você irá precisar.");
 }
 
 </script>
