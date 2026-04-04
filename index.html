@@ -254,6 +254,53 @@ button:hover{ background:#0d47a1; }
 
     function gerarNumeroPedido() { return "NRP-" + Math.random().toString(36).substr(2, 6).toUpperCase(); }
 
+    document.getElementById("cupom").addEventListener("input", function(){
+
+    let codigo = this.value.trim().toUpperCase();
+    let cupom = cupons.find(c => c.code === codigo);
+
+    if(!codigo){
+    cupomValido = false;
+    document.getElementById("cupomMsg").innerText = "";
+    calcular();
+    return;
+    }
+
+    if(!cupom){
+    cupomValido = false;
+    document.getElementById("cupomMsg").innerText = "❌ Cupom inválido.";
+    calcular();
+    return;
+    }
+
+    let hoje = new Date();
+    let dataExpira = new Date(cupom.expira);
+
+    if(hoje > dataExpira){
+    cupomValido = false;
+    document.getElementById("cupomMsg").innerText = "❌ Cupom expirado.";
+    calcular();
+    return;
+    }
+
+    if(cupom.usos >= cupom.limite){
+    cupomValido = false;
+    document.getElementById("cupomMsg").innerText = "❌ Cupom esgotado.";
+    calcular();
+    return;
+    }
+
+    cupomValido = true;
+    descontoPercentual = cupom.discount;
+
+    document.getElementById("cupomMsg").innerText =
+    "✅ Cupom aplicado: "+cupom.discount+"% de desconto";
+
+    calcular();
+    return;
+
+    });
+
     function comprar(){
         let nome = document.getElementById("nomecompleto").value;
         let iddiscord = document.getElementById("iddiscord").value;
