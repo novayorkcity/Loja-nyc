@@ -316,17 +316,33 @@ button:hover{ background:#0d47a1; }
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                content: "💙 **NOVA ROLEPLAY - NOVO PEDIDO**\n" +
-                         "📦 ID: `" + pedidoID + "`\n" +
-                         "👤 Nick: " + nick + " | ID: " + idconta + "\n" +
-                         "💵 Cash: " + cash + " | Total: R$ " + document.getElementById("valor").innerText + "\n" +
-                         "🔐 Dados: || Nome: " + nome + " | CPF: " + document.getElementById("cpf").value + " ||\n" +
-                         "🤖 Discord: <@" + iddiscord + ">"
-            })
-        });
+                content: 
+        "💙 **__NOVA ROLEPLAY - NOVO PEDIDO__**\n" +
+        "📦 **ID DO PEDIDO:** `" + pedidoID + "`\n\n" +
 
-        alert("✅ Pedido enviado! ID: " + pedidoID);
-    }
+        "👤 **NICK:** " + nick + "\n" +
+        "🆔 **ID:** " + idconta + "\n" +
+        "💵 **CASH:** " + cash + "\n" +
+        "💰 **VALOR:** R$ " + document.getElementById("valor").innerText + "\n" +
+        "🎟️ **CUPOM:** " + (codigo || "Nenhum") + "\n\n" +
+
+        "**__🔐 DADOS DO COMPRADOR:__** \n\n" +
+
+        "👤 **NOME COMPLETO:** ||" + nomecompleto + "||\n" +
+        "🤖 **DISCORD:** ||<@" + iddiscord + ">||\n" +
+        "📧 **E-MAIL:** ||" + email + "||\n" +
+        "🪪 **CPF:** ||" + cpf + "||\n" +
+        "📞 **TELEFONE:** ||" + telefone + "||\n\n" +
+        "<@&1474052698121834506>\n"
+    })
+});
+registrarPedido();
+
+    alert("✅Pedido enviado com sucesso!\n\n"+
+          "📝ID DO PEDIDO: "+pedidoID+"\n"+
+          " Guarde o ID do pedido, você irá precisar.");
+}
+
 </script>
 </body>
 </html>
