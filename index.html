@@ -19,11 +19,18 @@ html, body {
 }
 
 body {
-    width: 100%;
-    background: 
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url("logo.png") no-repeat center center fixed;
-    background-size: cover;
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE/Edge */
+    user-select: none;          /* Padrão */
+}
+
+/* Permite selecionar apenas dentro dos inputs para o usuário conseguir digitar */
+input {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 .container {
@@ -293,6 +300,15 @@ button:hover{ background:#0d47a1; }
 </div>
 
 <script>
+    // Bloqueia o clique com o botão direito
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Bloqueia atalhos de teclado como Ctrl+S (Salvar) e Ctrl+U (Ver código fonte)
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85 || e.keyCode === 73)) {
+            return false;
+        }
+    };
 // MANTENHA TODO O SEU SCRIPT ORIGINAL AQUI PARA AS FUNÇÕES FUNCIONAREM
 // (O código continua exatamente igual ao que você enviou acima)
 
