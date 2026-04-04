@@ -235,15 +235,11 @@ button:hover{ background:#0d47a1; }
         if(!validarEmail(input.value)){ erro.innerText = "E-mail inválido!"; input.classList.add("input-erro"); }
         else { erro.innerText = ""; input.classList.remove("input-erro"); }
     }
-    function validarIDDiscord(id){ return /^\d{17,20}$/.test(id.replace(/\D/g, "")); }
-    
-    function formatarTelefone(input){
-        let v = input.value.replace(/\D/g,"").slice(0,11);
-        if(v.length >= 11) input.value = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7,11)}`;
-        else if(v.length > 2) input.value = `(${v.slice(0,2)}) ${v.slice(2)}`;
-        else if(v.length > 0) input.value = `(${v}`;
-    }
 
+    /* ================= DISCORD ================= */
+    function validarIDDiscord(id){ return /^\d{17,20}$/.test(id.replace(/\D/g, "")); }
+
+    /* ================= CPF ================= */
     function formatarCPF(input){
         let v = input.value.replace(/\D/g,"").slice(0,11);
         if(v.length > 9) input.value = `${v.slice(0,3)}.${v.slice(3,6)}.${v.slice(6,9)}-${v.slice(9,11)}`;
@@ -273,6 +269,37 @@ button:hover{ background:#0d47a1; }
         else { erro.innerText = ""; campo.classList.remove("input-erro"); }
     }
 
+    /* ================= TELEFONE ================= */
+    function validarTelefone(numero){
+    numero = numero.replace(/\D/g, ""); // remove tudo que não é número
+
+    // aceita números com 10 ou 11 dígitos (Brasil)
+    if(numero.length < 10 || numero.length > 11){
+        return false;
+    }
+
+    return true;
+}
+
+function formatarTelefone(input){
+    let v = input.value.replace(/\D/g,"").slice(0,11);
+
+    if(v.length > 6){
+        input.value = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7,11)}`;
+    }
+    else if(v.length > 2){
+        input.value = `(${v.slice(0,2)}) ${v.slice(2)}`;
+    }
+    else if(v.length > 0){
+        input.value = `(${v}`;
+    }
+    else{
+        input.value = "";
+    }
+}
+
+/* ================================== */
+    
     function gerarNumeroPedido() { return "NRP-" + Math.random().toString(36).substr(2, 6).toUpperCase(); }
 
     document.getElementById("cupom").addEventListener("input", function(){
