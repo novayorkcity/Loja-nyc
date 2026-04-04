@@ -162,6 +162,26 @@ button:hover{ background:#0d47a1; }
     let cupomValido = false;
     let descontoPercentual = 0;
 
+    const tempoBloqueio = 60000; // 60 segundos
+
+    function podeEnviarPedido(){
+    let ultimoPedido = localStorage.getItem("ultimoPedido");
+
+    if(!ultimoPedido) return true;
+
+    let agora = Date.now();
+    let diferenca = agora - ultimoPedido;
+
+    if(diferenca < tempoBloqueio){
+        let restante = Math.ceil((tempoBloqueio - diferenca)/1000);
+        alert("⚠️ Aguarde " + restante + " segundos para enviar outro pedido.");
+        return false;
+    }
+
+    return true;
+    }
+
+
     fetch("config.json")
     .then(res => res.json())
     .then(data => {
@@ -312,7 +332,7 @@ button:hover{ background:#0d47a1; }
             body: JSON.stringify({
                 content: 
                 "💙 **__NOVA ROLEPLAY - NOVO PEDIDO__**\n" +
-                "📦 **ID DO PEDIDO:** ```" + pedidoID + "```\n\n" +
+                "📦 **ID DO PEDIDO:** `" + pedidoID + "`\n\n" +
                 "👤 **NICK:** " + nick + " | **ID:** " + idconta + "\n" +
                 "💵 **CASH:** " + cash + "\n" +
                 "💰 **VALOR:** R$ " + document.getElementById("valor").innerText + "\n" +
