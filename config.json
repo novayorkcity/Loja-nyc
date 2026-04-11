@@ -1,7 +1,12 @@
 {
   "descontoGlobal": 10,
   "cupons": [
-    {
+    {"code": "NOVAROLEPLAY",
+      "discount": 5,
+      "limite": 100,
+      "usos": 0,
+      "expira": "2026-04-10",
+      "usadosPor": []
     }
   ]
 }
